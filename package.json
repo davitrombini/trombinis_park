@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/davitrombini/trombinis_park/issues"
   },
-  "homepage": "https://github.com/davitrombini/trombinis_park#readme"
+  "homepage": "https://github.com/davitrombini/trombinis_park#readme",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
 }

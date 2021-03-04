@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/davitrombini/trombinis_park#readme",
   "dependencies": {
+    "fomantic-ui": "^2.8.7",
     "jquery": "^3.6.0"
   }
 }

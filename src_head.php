@@ -9,4 +9,7 @@
     <!-- Fomantic Ui -->
     <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
     <script src="/semantic/dist/semantic.min.js"></script>
+
+    <!-- General CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>

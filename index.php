@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<?php include_once('src_head.php'); ?>
+<?php include_once('./src_head.php'); ?>
 
 <body>
-  
-   <button class="ui blue button">
-       Salve!
-   </button>  
+
+   <?php include('./header.php'); ?>
+
+   <?php include('./footer.php'); ?>
+   
 </body>
 
 </html>
+

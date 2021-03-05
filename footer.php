@@ -14,19 +14,19 @@
         <!-- facebook page -->
   </div>
   <div class="four wide column">
-
-        <div class="row">
-            <a href="https://www.instagram.com/trombinis_park/">
-                <i class="red huge instagram icon"></i>
-                <span>@trombinis_park</span>
-            </a>
-        </div>
         <div class="row">
             <a href="https://www.youtube.com/channel/UCO5v-5CmduNle6erz7bKlfA">
                 <i class="red huge youtube icon"></i>
                 <span>Canal do YouTube </span>
             </a>
         </div>
+        <div class="row">
+            <a href="https://www.instagram.com/trombinis_park/">
+                <i class="red huge instagram icon"></i>
+                <span>@trombinis_park</span>
+            </a>
+        </div>
+        
   </div>
 
   <div class="four wide column">a</div>

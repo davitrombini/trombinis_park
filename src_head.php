@@ -11,5 +11,5 @@
     <script src="/semantic/dist/semantic.min.js"></script>
 
     <!-- General CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/src/css/main.css">
 </head>

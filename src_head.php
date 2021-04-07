@@ -7,7 +7,7 @@
     <meta charset="UTF-8">  
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="shortcut icon" href="/img/logo/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./img/logo/favicon.ico" type="image/x-icon" />
     <title>Trombini's Park | Locação de Brinquedos</title>
 
     <!-- TODO add to home screen -->
@@ -45,12 +45,12 @@
     <!-- cookies -->
 
     <!-- jQuery -->
-    <script src = "/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src = "./node_modules/jquery/dist/jquery.min.js"></script>
 
     <!-- Fomantic Ui -->
-    <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
-    <script src="/semantic/dist/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./semantic/dist/semantic.min.css">
+    <script src="./semantic/dist/semantic.min.js"></script>
 
     <!-- General CSS -->
-    <link rel="stylesheet" type="text/css" href="/src/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./src/css/main.css">
 </head>

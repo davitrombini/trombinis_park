@@ -53,4 +53,21 @@
 
     <!-- General CSS -->
     <link rel="stylesheet" type="text/css" href="./src/css/main.css">
+
+    <script>
+            function showModal(text){
+                $.ajax({
+					type: "POST",
+					url: "src_modal.php",
+					data: {
+                        'text' : text,
+                    },
+					success: function(data){
+                        $(document.body).html(data);
+					}
+				});    
+            }
+
+    </script>
+
 </head>

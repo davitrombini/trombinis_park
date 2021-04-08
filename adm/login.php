@@ -1,4 +1,4 @@
-<!-- página de exemplo de estrutura a ser seguida -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <?php include_once('./src_head_adm.php'); ?>
@@ -7,7 +7,41 @@
       body{
         background-color: #EEEEEE;
       }
-</style>  
+</style>
+
+<script>
+		$(function () {
+
+			$("#form-login").submit(function(e) {
+
+				e.preventDefault(); 
+
+				var form = $(this);
+				var url = "src_login.php";
+
+				$.ajax({
+							type: "POST",
+							url: url,
+							data: form.serialize(), 
+							success: function(data){
+								
+								//debug
+								//console.log(data);
+
+								// caso tenha voltado como 0, o user não foi encontrado
+								// então alertar que isso ocorreu.
+								if(data == false){
+									showModal("Email/senha inválidos - por favor confira!!!");
+								}
+							}
+						});
+
+
+				});
+
+
+		});
+</script>
 	<body>
 
 		<section class="login">
@@ -18,7 +52,7 @@
 
 				<div class="six wide column">
 
-					<form class="ui mini form" method="POST" action="./src_login.php">
+					<form class="ui mini form" method="POST" action="" id="form-login">
 
 						<div class="field">
 							<label for="email">Email:</label>
@@ -32,7 +66,7 @@
 								<input type="password" placeholder="Insira sua senha" name="senha"> </div>
 						</div>
 
-						<button class="ui blue icon button">
+						<button class="ui blue icon button" id="enviar">
               <i class="arrow alternate circle right icon"></i>
               Login
             </button>

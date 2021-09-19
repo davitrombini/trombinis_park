@@ -3,6 +3,7 @@
      $email = $_POST['email'];
      $senha = hash("sha512", $_POST['senha']);
 
+     //echo $senha;die;
      //debug
      //echo $senha; die;
     

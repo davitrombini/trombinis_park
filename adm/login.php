@@ -17,7 +17,7 @@
 				e.preventDefault(); 
 
 				var form = $(this);
-				var url = "src_login.php";
+				var url = "master_login.php";
 
 				$.ajax({
 							type: "POST",

@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php include_once('./src_head_adm.php'); ?>
+<?php include_once('./master_head_adm.php'); ?>
 
 <style>
       body{

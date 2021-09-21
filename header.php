@@ -142,6 +142,7 @@
         }
         ul li a:hover {
             background: none;
+            color: #e040fb;
         }
         .nav__icon,
         .nav__icon span {

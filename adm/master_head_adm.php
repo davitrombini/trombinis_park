@@ -58,7 +58,7 @@
             function showModal(text){
                 $.ajax({
 					type: "POST",
-					url: "../src_modal.php",
+					url: "../master_modal.php",
 					data: {
                         'text' : text
                     },

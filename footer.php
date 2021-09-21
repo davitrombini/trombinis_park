@@ -29,7 +29,7 @@
         
   </div>
 
-  <div class="four wide column">a</div>
+  <div class="four wide column"></div>
 
 </div>
 

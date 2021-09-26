@@ -13,7 +13,7 @@
     }
 
     header {
-        background: #e040fb;
+        background-image: linear-gradient(to bottom, #c435dd, #e040fb);
         width: 100%;
     }
 
@@ -55,11 +55,15 @@
         margin: 0px 10px;
         padding: 10px;
         border-radius: 5px;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
     }
 
     ul li a:hover {
-        color: aqua;
-        background: #d500f9;
+        color: #d500f9;
+        background :#fbf0fd;
+        transition: 0.2s ease-in;
     }
 
     .nav__icon,

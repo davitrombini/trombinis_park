@@ -1,37 +1,33 @@
-<footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/footer.css">
+</head>
+<body>
 
-<div class="ui grid">
+    <footer>
 
-  <div class="two wide column">
-        
-  </div>
+        <div class="element endereco">
+            <h2>Endereço</h2>
+            <p>Rua Ubaldo Damiano, 270 | Jaú/SP - CEP: 17204281</p>
+        </div><!--
 
-  <div class="four wide column">
-        <!-- facebook page -->
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v10.0" nonce="0qZX27h3"></script>
-        <div class="fb-page" data-href="https://www.facebook.com/trombinispark/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/trombinispark/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/trombinispark/">Trombini&#039;s Park</a></blockquote></div>
-        <!-- facebook page -->
-  </div>
-  <div class="four wide column">
-        <div class="row">
-            <a href="https://www.youtube.com/channel/UCO5v-5CmduNle6erz7bKlfA">
-                <i class="red huge youtube icon"></i>
-                <span>Canal do YouTube </span>
-            </a>
+     --><div class="element contatos">
+            <h2>Contatos</h2>
+            <a href="https://pt-br.facebook.com/trombinispark/"><i class="huge facebook square icon"></i></a>
+            <a href=""><i class="huge green whatsapp square icon"></i></a>
+            <a href="https://www.instagram.com/trombinis_park/"><i class="huge black instagram square icon"></i></a>
+        </div><!--
+
+     --><div class="element sobre">
+            <h2>Sobre</h2>
+            <p>A Trombini's Park é uma empresa que aluga brinquedos para festas infantis</p>
         </div>
-        <div class="row">
-            <a href="https://www.instagram.com/trombinis_park/">
-                <i class="red huge instagram icon"></i>
-                <span>@trombinis_park</span>
-            </a>
-        </div>
-        
-  </div>
 
-  <div class="four wide column"></div>
+    </footer>
 
-</div>
-
-
-</footer>
+</body>
+</html>

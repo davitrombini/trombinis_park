@@ -17,9 +17,9 @@
 
      --><div class="element contatos">
             <h2>Contatos</h2>
-            <a href="https://pt-br.facebook.com/trombinispark/"><i class="huge blue facebook square icon"></i></a>
-            <a href=""><i class="huge green whatsapp square icon"></i></a>
-            <a href="https://www.instagram.com/trombinis_park/"><i class="huge black instagram square icon"></i></a>
+            <a href="https://pt-br.facebook.com/trombinispark/" target="_blank"><i class="huge blue facebook square icon"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=5514988156384" target="_blank"><i class="huge green whatsapp square icon"></i></a>
+            <a href="https://www.instagram.com/trombinis_park/" target="_blank"><i class="huge black instagram square icon"></i></a>
         </div><!--
 
      --><div class="element sobre">

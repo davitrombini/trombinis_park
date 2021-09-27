@@ -13,6 +13,18 @@ footer{
 .element{
     display: inline-block;
     text-align: center;
-    font-size: 16px;
     width: 33.33%;
+}
+
+p{
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 700px){
+    .element{
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+    }
 }

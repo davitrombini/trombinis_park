@@ -14,7 +14,38 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">Brinquedos</a></li>
             <li><a href="#">Sobre</a></li>
-            <li><a href="#">Minha Conta</a></li>
+
+            <!-- <li><a href="#">Minha Conta</a></li> -->
+            <div class="box-login">
+              
+              <li><a href="#">Minha Conta</a></li>
+
+              <div class="arrow-up"></div>
+
+              <div class="login-form">
+                <div class="center">
+                  <form method="post">
+                    <div class="txt_field">
+                      <input type="text" required>
+                      <span></span>
+                      <label>Username</label>
+                    </div>
+                    <div class="txt_field">
+                      <input type="password" required>
+                      <span></span>
+                      <label>Password</label>
+                    </div>
+                    <div class="pass">Esqueceu a Senha?</div>
+                    <input type="submit" value="Login">
+                    <div class="signup_link">
+                      Não é um membro? <a href="#">Registre-se</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+          </div>
+
         </ul>
         <div class="nav__icon">
             <span></span>

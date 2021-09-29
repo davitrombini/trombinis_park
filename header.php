@@ -16,6 +16,7 @@
             <li><a href="#">Sobre</a></li>
 
             <!-- <li><a href="#">Minha Conta</a></li> -->
+            <!-- Menu Dropdown -->
             <div class="box-login">
               
               <li><a href="#">Minha Conta</a></li>
@@ -44,7 +45,7 @@
                 </div>
               </div>
 
-          </div>
+          </div> <!-- Fim Menu Dropdown -->
 
         </ul>
         <div class="nav__icon">

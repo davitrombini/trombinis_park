@@ -7,13 +7,56 @@ footer{
     background-image: linear-gradient(to bottom, #c435dd, #e040fb);
     color: #fff;
     width: 100%;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .element{
     display: inline-block;
     text-align: center;
     width: 33.33%;
+}
+
+.element.endereco {
+    position: relative;
+    bottom: 40px;
+}
+
+.element.sobre {
+    position: relative;
+    bottom: 18px;
+}
+
+.container {
+    display: inline-flex;
+    list-style: none;
+}
+
+.container li {
+    height: 60px;
+    width: 60px;
+    border: 2px solid #fff;
+    margin: 0 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container li:hover {
+    background: #fff;
+    transition: 0.3s;
+}
+
+.container li a {
+    line-height: 60px;
+    font-size: 34px;
+}
+
+.fab {
+    color: white;
+}
+
+.container li:hover .fab {
+    color: #aa2ec0;
+    transition: 0.3s;
 }
 
 p{
@@ -28,3 +71,37 @@ p{
         padding: 20px;
     }
 }
+
+@media only screen and (max-width: 1200px){
+    .element.endereco {
+        bottom: 22px;
+    }
+
+    .element.sobre {
+        top: 0px;
+        padding-left: 40px;
+    }
+
+    .element.contatos {
+        position: relative;
+        left: 20px;
+        bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .element.endereco {
+        bottom: 45px;
+    }
+
+    .element.sobre {
+        top: 0px;
+        padding-left: 40px;
+    }
+
+    .element.contatos {
+        position: relative;
+        bottom: 25px;
+    }
+}
+

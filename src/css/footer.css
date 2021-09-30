@@ -64,14 +64,22 @@ p{
 }
 
 @media only screen and (max-width: 700px){
+    footer{
+        padding: 40px;
+    }
+
     .element{
         display: block;
         text-align: center;
         width: 100%;
-        padding: 20px;
+        padding-bottom: 20px;
+    }
+
+    .contatos{
+        padding-bottom: 20px;
     }
 }
-
+/*
 @media only screen and (max-width: 1200px){
     .element.endereco {
         bottom: 22px;
@@ -104,4 +112,4 @@ p{
         bottom: 25px;
     }
 }
-
+*/

@@ -21,15 +21,9 @@
      --><div class="element contatos">
             <h2>Contatos</h2>
             <div class="container">
-                <li><a href="https://pt-br.facebook.com/trombinispark/" target="_blank">
-                    <span class="fab fa-facebook-f"></span>
-                </a></li>
-                <li><a href="https://api.whatsapp.com/send?phone=5514988156384" target="_blank">
-                    <span class="fab fa-whatsapp"></span>
-                </a></li>
-                <li><a href="https://www.instagram.com/trombinis_park/" target="_blank">
-                    <span class="fab fa-instagram"></span>
-                </a></li>
+            <a href="https://pt-br.facebook.com/trombinispark/" target="_blank"><i class="huge blue facebook square icon"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=5514988156384" target="_blank"><i class="huge green whatsapp circle icon"></i></a>
+            <a href="https://www.instagram.com/trombinis_park/" target="_blank"><i class="huge black instagram circle icon"></i></a>
             </div>
         </div><!--
 

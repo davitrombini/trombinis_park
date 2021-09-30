@@ -4,7 +4,7 @@
 }
 
 footer{
-    background-image: linear-gradient(to bottom, #c435dd, #e040fb);
+    background-image: linear-gradient(to bottom, #C36EE0, #ae35d9);
     color: #fff;
     width: 100%;
     padding: 10px 0;
@@ -50,14 +50,8 @@ footer{
     font-size: 34px;
 }
 
-.fab {
-    color: white;
-}
 
-.container li:hover .fab {
-    color: #aa2ec0;
-    transition: 0.3s;
-}
+
 
 p{
     font-size: 16px;
@@ -111,5 +105,14 @@ p{
         position: relative;
         bottom: 25px;
     }
+}
+
+.fab {
+    color: white;
+}
+
+.container li:hover .fab {
+    color: #aa2ec0;
+    transition: 0.3s;
 }
 */

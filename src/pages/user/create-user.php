@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../css/create-user.css">
   <title>Criar conta</title>
+  <?php include ('C:/xampp/htdocs/trombinis_park/master_head.php'); ?>
 </head>
 <body>
   <form class="ui form" id="create-user-form">

@@ -21,7 +21,7 @@
     <div class="row">
       <div class="eleven wide column">
         <form class="ui form" id="create-user-form">
-          <div class="ui segment" style="box-sizing: border-box; border: 2px solid #ae35d9;">
+          <div class="ui segment" style="border: 1px solid #ae35d9;">
             <div class="required field">
               <label for="input-user-name" style="text-align: left; color: #ae35d9;">Nome</label>
               <div class="ui left icon input">

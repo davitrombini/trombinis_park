@@ -16,42 +16,10 @@ footer{
     width: 33.33%;
 }
 
-.element.endereco {
-    position: relative;
-    bottom: 40px;
-}
-
-.element.sobre {
-    position: relative;
-    bottom: 18px;
-}
-
 .container {
     display: inline-flex;
     list-style: none;
 }
-
-.container li {
-    height: 60px;
-    width: 60px;
-    border: 2px solid #fff;
-    margin: 0 12px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.container li:hover {
-    background: #fff;
-    transition: 0.3s;
-}
-
-.container li a {
-    line-height: 60px;
-    font-size: 34px;
-}
-
-
-
 
 p{
     font-size: 16px;
@@ -66,11 +34,14 @@ p{
         display: block;
         text-align: center;
         width: 100%;
-        padding-bottom: 20px;
     }
 
     .contatos{
-        padding-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .sobre{
+        margin-top: 20px;
     }
 }
 /*

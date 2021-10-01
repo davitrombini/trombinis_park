@@ -8,70 +8,52 @@
   <title>Criar conta</title>
   <link rel="stylesheet" type="text/css" href="../../../semantic/dist/semantic.min.css">
   <script src="../../../semantic/dist/semantic.min.js"></script>
-  <script>
-
-    $('.ui.form').form({
-      fields: {
-        name: {
-          rules: [{
-            type: 'empty',
-            Prompt: 'Por favor, insira seu nome'
-          }]
-        },
-        email: {
-          rules: [{
-            type: 'empty',
-            Prompt: 'Por favor, insira seu e-mail'
-          }]
-        }
-      }
-    });
-
-  </script>
 </head>
 <body>
-  <div class="ui middle aligned center aligned grid container" style="position: relative; top: 15%">
-    <div class="column" style="width: 60%">
-      <h1 class="ui pink header">
-        <div class="content">
-          Crie sua conta
+  <div class="ui centered grid container">
+    <div class="row">
+      <div class="column">
+        <div class="ui centered header">
+          <h1 style="color: #ae35d9;">Crie sua conta</h1>
         </div>
-      </h1>
-      <form class="ui centered form" id="create-user-form">
-        <div class="ui stacked segment" style="margin-top: 30px;">
-          <div class="field">
-            <div class="ui left icon input">
-              <i class="user icon"></i>
-              <input type="text" name="name" maxlength="255" id="input-user-name" placeholder="Nome">
+      </div>
+    </div>
+    <div class="row">
+      <div class="eleven wide column">
+        <form class="ui form" id="create-user-form">
+          <div class="ui segment" style="box-sizing: border-box; border: 2px solid #ae35d9;">
+            <div class="required field">
+              <label for="input-user-name" style="text-align: left; color: #ae35d9;">Nome</label>
+              <div class="ui left icon input">
+                <i class="user icon"></i>
+                <input type="text" name="name" maxlength="255" id="input-user-name" placeholder="Digite seu nome...">
+              </div>
             </div>
-          </div>
-          
-          <div class="field">
-            <div class="ui left icon input">
-              <i class="envelope icon"></i>
-              <input type="email" name="email" maxlength="255" id="input-user-email" placeholder="Email">
+            <div class="required field">
+              <label for="input-user-email" style="text-align: left; color: #ae35d9;">Email</label>
+              <div class="ui left icon input">
+                <i class="envelope icon"></i>
+                <input type="email" name="email" maxlength="255" id="input-user-email" placeholder="email@exemplo.com">
+              </div>
             </div>
-          </div>
-
-           <div class="field">
+            <div class="required field">
+              <label for="input-user-password" style="text-align: left; color: #ae35d9;">Senha</label>
               <div class="ui left icon input">
                 <i class="lock icon"></i>
-                <input type="password" name="password" maxlength="255" id="input-user-password" placeholder="Senha">
+                <input type="password" name="password" maxlength="255" id="input-user-password" placeholder="Deve conter no mínimo 8 caracteres">
+              </div>
             </div>
+            <button class="ui fluid large right labeled icon submit button" style="background-color: #ae35d9; color: #fff;">
+              Cadastrar
+              <i class="right arrow icon"></i>
+            </button>
           </div>
-
-          <button class="ui centered large pink right labeled icon submit button">
-            <i class="right arrow icon"></i>
-            Cadastrar
-          </button>
-        </div>
-        <div class="ui error message"></div>
+        </form>
         <p id="result"></p>
-      </form>
+      </div>
     </div>
   </div>
 </body>
-
 <script>
   document.getElementById("create-user-form").addEventListener("submit", function (e) {
     e.preventDefault();

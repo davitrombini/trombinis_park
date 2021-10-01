@@ -6,9 +6,11 @@
  	$name = $received_data['name'];
  	$email = $received_data['email'];
  	$password = $received_data['password'];
+
+	$hashed_password = password_hash($password, PASSWORD_DEFAULT);
  	
  	$query = "insert into users(name, email, password, admin) 
-								values('$name', '$email', '$password', false)";
+								values('$name', '$email', '$hashed_password', false)";
 
  	$result = mysqli_query($connection, $query);
 

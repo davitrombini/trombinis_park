@@ -8,20 +8,25 @@
   <title>Criar conta</title>
   <link rel="stylesheet" type="text/css" href="../../../semantic/dist/semantic.min.css">
   <script src="../../../semantic/dist/semantic.min.js"></script>
+  <style>
+    body{
+      background-image: linear-gradient(to bottom, #C36EE0, #ae35d9);
+    }
+  </style>
 </head>
 <body>
   <div class="ui centered grid container">
-    <div class="row">
-      <div class="column">
-        <div class="ui centered header">
-          <h1 style="color: #ae35d9;">Crie sua conta</h1>
-        </div>
-      </div>
-    </div>
-    <div class="row">
+    <div class="row" style="margin-top: 10%;">
       <div class="eleven wide column">
         <form class="ui form" id="create-user-form">
-          <div class="ui segment" style="border: 1px solid #ae35d9;">
+          <div class="ui segment" style="border: 1px solid #1b7ff2;">
+            <div class="row">
+              <div class="column">
+                <div class="ui centered header">
+                  <h1 style="color: #ae35d9;">Crie sua conta</h1>
+                </div>
+              </div>
+            </div>
             <div class="required field">
               <label for="input-user-name" style="text-align: left; color: #ae35d9;">Nome</label>
               <div class="ui left icon input">
@@ -43,10 +48,12 @@
                 <input type="password" name="password" maxlength="255" id="input-user-password" placeholder="Deve conter no mínimo 8 caracteres">
               </div>
             </div>
-            <button class="ui fluid large right labeled icon submit button" style="background-color: #ae35d9; color: #fff;">
-              Cadastrar
-              <i class="right arrow icon"></i>
-            </button>
+            <div class="column" style="text-align: center;">
+              <button class="ui large right labeled icon submit button" style="background-color: #ae35d9; color: #fff;">
+                Cadastrar
+                <i class="right arrow icon"></i>
+              </button>
+            </div>
           </div>
         </form>
         <p id="result"></p>

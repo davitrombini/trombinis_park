@@ -8,6 +8,7 @@
   <title>Criar conta</title>
   <link rel="stylesheet" type="text/css" href="../../../semantic/dist/semantic.min.css">
   <script src="../../../semantic/dist/semantic.min.js"></script>
+  <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
   <style>
     body{
       background-image: linear-gradient(to bottom, #C36EE0, #ae35d9);
@@ -31,21 +32,21 @@
               <label for="input-user-name" style="text-align: left; color: #ae35d9;">Nome</label>
               <div class="ui left icon input">
                 <i class="user icon"></i>
-                <input type="text" name="name" maxlength="255" id="input-user-name" placeholder="Digite seu nome...">
+                <input type="text" name="name" maxlength="255" id="input-user-name" placeholder="Insira seu nome" required>
               </div>
             </div>
             <div class="required field">
               <label for="input-user-email" style="text-align: left; color: #ae35d9;">Email</label>
               <div class="ui left icon input">
                 <i class="envelope icon"></i>
-                <input type="email" name="email" maxlength="255" id="input-user-email" placeholder="email@exemplo.com">
+                <input type="email" name="email" maxlength="255" id="input-user-email" placeholder="email@exemplo.com" required>
               </div>
             </div>
             <div class="required field">
               <label for="input-user-password" style="text-align: left; color: #ae35d9;">Senha</label>
               <div class="ui left icon input">
                 <i class="lock icon"></i>
-                <input type="password" name="password" maxlength="255" id="input-user-password" placeholder="Deve conter no mínimo 8 caracteres">
+                <input type="password" name="password" minlength="8" maxlength="255" id="input-user-password" placeholder="Insira sua senha" required>
               </div>
             </div>
             <div class="column" style="text-align: center;">
@@ -56,12 +57,15 @@
             </div>
           </div>
         </form>
+        <div class="ui error message" id="error message" style="display: none;"></div>
+        <div class="ui success message" id="success message" style="display: none;"></div>
         <p id="result"></p>
       </div>
     </div>
   </div>
 </body>
 <script>
+
   document.getElementById("create-user-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -80,11 +84,14 @@
     })
     .then(response => response.json())
     .then(response => {
-      document.getElementById("result").innerText = `${response.message}`;
+      document.getElementById("success message").style.display = "block";
+      document.getElementById("success message").innerText = `${response.message}`;
     })
     .catch((error) => {
-      document.getElementById("result").innerText = `${error.message}`;
+      document.getElementById("error message").style.display = "block";
+      document.getElementById("error message").innerText = `${error.message}`;
     });
+
   });
   
 </script>

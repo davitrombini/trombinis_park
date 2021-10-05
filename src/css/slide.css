@@ -1,0 +1,7 @@
+.controls-style {
+    font-size: 3rem;
+}
+
+.carousel-inner {
+    max-height: 600px !important;
+}

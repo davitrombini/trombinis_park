@@ -46,8 +46,6 @@
     <div class="circle"></div>
   </section>
 
-  <div class="ui error message" id="error message" style="display: none;"></div>
-  <div class="ui success message" id="success message" style="display: none;"></div>
   <!--<p id="result"></p>-->
 </body>
 <script>
@@ -70,12 +68,10 @@
     })
     .then(response => response.json())
     .then(response => {
-      document.getElementById("success message").style.display = "block";
-      document.getElementById("success message").innerText = `${response.message}`;
+      alert(`${response.message}`);
     })
     .catch((error) => {
-      document.getElementById("error message").style.display = "block";
-      document.getElementById("error message").innerText = `${error.message}`;
+      alert(`${error.message}`);
     });
 
   });

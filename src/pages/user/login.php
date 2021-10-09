@@ -40,14 +40,16 @@
 
         fetch('http://localhost/trombinis_park/controllers/user/login.php', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            redirect: "follow",
             body: JSON.stringify(data),
         })
-        .then(response => response.json())
-        .then(response => {
-            alert(`${response.message}`);
+        .then(async (response) => {
+            if(response.redirected) {
+                window.location.href = response.url;
+            } else {
+                const jsonResponse = await response.json();
+                alert(jsonResponse.message);
+            }
         })
         .catch((error) => {
             alert(`${error.message}`);

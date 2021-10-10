@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+
+}
+
+body{
+    background: #ff17d4;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    height: 60%;
+    margin-top: 50px;
+    background: #fff;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header{
+    background: dodgerblue;
+    min-width: 50vw;
+    min-height: 30vh;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px;
+    color: black;
+}
+
+.content .element{
+    padding: 0 5px;
+    clear: both;
+}
+
+.content .element:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.content .email p{
+    float: left;
+}
+
+.content .email .edit{
+    float: right;
+}
+
+.content .element:hover{
+    cursor: pointer;
+}
+
+.content button{
+    width: 100%;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+@media only screen and (max-width: 700px) {
+    body{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container{
+        margin-top: 0;
+    }
+}

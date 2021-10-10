@@ -24,7 +24,7 @@
         </form>
 
         <div class="footer">
-            <span>Esqueceu a senha? <a href="">Clique aqui</a></span>
+            <span>Esqueceu a senha? <a href="forget-password.php">Clique aqui</a></span>
             <span>Não tem uma conta? <a href="create-user.php">Cadastre-se aqui</a></span>
         </div>
     </main>

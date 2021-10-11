@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+
+    if (isset($_SESSION["user_id"])){
+        header("Location: http://localhost/trombinis_park/src/pages/user/my-account.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

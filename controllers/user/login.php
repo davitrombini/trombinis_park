@@ -28,7 +28,7 @@ if($matching_password) {
     $_SESSION["user_admin"] = $db_user['admin'];
 
     if ($_SESSION["user_admin"] == 1) {
-        header("Location: #");
+        header("Location: http://localhost/trombinis_park/src/pages/adm/index.php");
         exit();
     } else {
         header("Location: http://localhost/trombinis_park/");

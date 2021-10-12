@@ -12,8 +12,8 @@
     <nav>
         <h1 class="logo">Trombini's Park</h1>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Brinquedos</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="brinquedos.php">Brinquedos</a></li>
             <li><a href="#">Sobre</a></li>
             <li><a href="./src/pages/user/my-account.php">Minha Conta</a></li>            
         </ul>

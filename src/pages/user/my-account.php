@@ -57,9 +57,9 @@
 
             <div class="w3-center">
                 <div class="w3-bar">
-                    <span id="save-button" class="w3-button w3-blue w3-hover-green" style="visibility: hidden;">Salvar</span>
+                    <span id="save-button" class="w3-button w3-green" style="visibility: hidden;">Salvar</span>
                     <span class="w3-button w3-blue" onclick="document.getElementById('save-button').style.visibility='visible'">Editar</span>
-                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-blue w3-hover-red">Cancelar</span>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-red">Cancelar</span>
                 </div>
             </div>
         </div>

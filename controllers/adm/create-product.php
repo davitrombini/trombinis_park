@@ -1,6 +1,12 @@
 <?php
+    session_start();
+
+    if ($_SESSION["user_id"] != 1){
+        header("Location: http://localhost/trombinis_park/");
+    }
+
     include_once("../../database/connection.php");
-    
+
     $received_data = json_decode(file_get_contents("php://input"), true);
 
     $title = $received_data["title"];

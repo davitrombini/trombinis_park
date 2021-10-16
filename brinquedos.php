@@ -12,7 +12,9 @@
 <body>
     <?php include_once("./header.php"); ?>
 
-    <div id="products"></div>
+    <main>
+        <div id="products"></div>
+    </main>
 
     <?php include_once("./footer.php"); ?>
 </body>
@@ -40,7 +42,7 @@
             const productDescription = document.createElement("p");
             productDescription.classList.add("product-description");
 
-            const productButton = document.createElement("button");
+            const productButton = document.createElement("a");
             productButton.classList.add("btn");
             productButton.classList.add("w3-display-hover");
 

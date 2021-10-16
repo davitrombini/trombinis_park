@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+}
+
+header{
+    padding: 20px !important;
+}
+
+main{
+   position: relative;
+   width: 100%;
+}
+
+.btn-create-product{
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+}
+
+.btn-create-product a{
+    padding: 16px;
+    background: limegreen;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all .3s ease-in;
+}
+
+.btn-create-product a:hover{
+    background: green;
+}
+
+table{
+    position: absolute;
+    top: 4.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    width: 80%;
+}
+
+table, th, td{
+    border-collapse: collapse;
+}
+
+th{
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+}
+
+th, td{
+    padding: 8px;
+    text-align: center;
+}
+
+tr:nth-child(even){
+    background: #f2f2f2;
+}
+
+table .btn-delet, .btn-edit{
+    padding: 10px;
+    display: block;
+    text-align: center;
+    color: #fff;
+    transition: all .2s ease-in;
+}
+
+.btn-delet:hover, .btn-edit:hover{
+    cursor: pointer;
+}
+
+.btn-edit{
+    background: steelblue;
+}
+
+.btn-edit:hover{
+    background: darkblue;
+}
+
+.btn-delet{
+    background: #ff2424;
+}
+
+.btn-delet:hover{
+    background: rgb(177, 0, 0);
+}

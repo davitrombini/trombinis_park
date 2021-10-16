@@ -7,13 +7,10 @@
 
     include_once("../../database/connection.php");
 
-    $query = "select * from products";
+    $id = $_GET["id"];
+    $query = "select name, email from users where id = $id";
     $result = mysqli_query($connection, $query);
-
-    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-    if ($result){
-        echo json_encode($rows);
-    }
+    $row = mysqli_fetch_assoc($result);
+    echo json_encode($row);
 
     mysqli_close($connection);

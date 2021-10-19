@@ -21,6 +21,7 @@
     if ($result){
         $response = array("message" => "Produto cadastrado com sucesso!");
         echo json_encode($response);
+        header("Location: http://localhost/trombinis_park/src/pages/adm/brinquedos.php");
     } else {
         die("Ops, ocorreu um erro: " . mysqli_error($connection));
     }

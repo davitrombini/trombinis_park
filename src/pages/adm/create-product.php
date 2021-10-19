@@ -23,7 +23,7 @@
             <header class="form-header">
                 <h2>Cadastrar Brinquedo</h2>
             </header>
-            <form>
+            <form id="create-product">
                 <label for="product-title">Título:</label><br>
                 <input type="text" name="product-title" id="product-title" maxlength="255" required><br>
                 <label for="product-desc">Descrição:</label><br>
@@ -38,7 +38,7 @@
     </main>
 </body>
 <script>
-    document.getElementById("create-product-form").addEventListener("submit", function (e){
+    document.getElementById("create-product").addEventListener("submit", function (e){
         e.preventDefault();
 
         const data = {
@@ -49,10 +49,17 @@
 
         fetch("http://localhost/trombinis_park/controllers/adm/create-product.php", {
             method: "POST",
-            body: JSON.stringify(data),
+            redirect: "follow",
+            body: JSON.stringify(data)
         })
-        .then((response) => response.json())
-        .then((response) => alert(response.message))
+        .then(async (response) => {
+            if (response.redirected){
+                window.location.href = response.url;
+            } else {
+                const jsonResponse = await response.json();
+                alert(jsonResponse.response);
+            }
+        })
         .catch((error) => {
             alert(`${error.message}`);
         });

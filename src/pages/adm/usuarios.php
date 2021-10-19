@@ -19,16 +19,6 @@
 <body>
     <?php include_once("header.php") ?>
 
-    <?php
-        session_start();
-
-        if (isset($_SESSION["message"])){
-            $msg = $_SESSION["message"];
-            echo "<script>alert('$msg')</script>";
-            unset($_SESSION["message"]);
-        }
-    ?>
-
     <main>
         <table>
             <thead>

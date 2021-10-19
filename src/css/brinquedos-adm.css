@@ -56,6 +56,10 @@ th{
     text-align: center;
 }
 
+td:nth-child(3){
+    text-align: left;
+}
+
 th, td{
     padding: 8px;
     text-align: center;

@@ -17,8 +17,8 @@
 }
 
 .product-item{
-    margin: 1rem;
-    padding: 1rem;
+    margin: 1rem;/*
+    padding: 1rem;*/
     display: inline-block;
     text-align: center;
     position: relative;

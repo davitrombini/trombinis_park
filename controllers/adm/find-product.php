@@ -1,10 +1,4 @@
 <?php
-    session_start();
-
-    if ($_SESSION["user_id"] != 1){
-        header("Location: http://localhost/trombinis_park/");
-    }
-
     include_once("../../database/connection.php");
 
     $id = $_GET["id"];

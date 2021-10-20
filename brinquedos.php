@@ -62,6 +62,7 @@
             productTitle.innerText = product.title;
             productDescription.innerText = product.description;
             productButton.innerHTML = "Ver Detalhes";
+            productButton.href = "ver-detalhes?id=" + product.id;
 
             productContainer.appendChild(productImage);
             productContainer.appendChild(productTitle);

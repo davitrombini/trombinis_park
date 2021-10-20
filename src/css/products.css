@@ -25,9 +25,13 @@
     
 }
 
-p{
+.product-item p{
     font-weight: 400;
     font-size: 16px;
+    max-width: 30ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .product-item .product-image{

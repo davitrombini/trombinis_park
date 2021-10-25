@@ -28,6 +28,7 @@ main{
 form{
     background: #dadada;
     padding: 15px;
+    border-radius: 0 0 10px 10px;
 }
 
 form > input, textarea{

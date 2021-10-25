@@ -11,8 +11,8 @@
     if ($user_password == null){
         $query = "update users set name = '$user_name', email = '$user_email' where id = $user_id";
         mysqli_query($connection, $query);
-    } else{
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    } else {
+        $hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
         $query = "update users set name = '$user_name', email = '$user_email', password = '$hashed_password' where id = $user_id";
         mysqli_query($connection, $query);   
     }

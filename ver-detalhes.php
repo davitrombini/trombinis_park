@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./semantic/dist/semantic.min.css">
     <script src="./semantic/dist/semantic.min.js"></script>
-    <title>Document</title>
 </head>
 <body>
     <?php include_once("header.php"); ?>
@@ -68,6 +67,7 @@
         document.getElementById("img").src = response.img;
         document.getElementById("title").innerText = response.title;
         document.getElementById("desc").innerText = response.description;
+        document.title = response.title;
     })
 </script>
 </html>

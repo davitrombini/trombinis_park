@@ -35,6 +35,8 @@
             margin-right: 15px;
             transition: all .3s ease-in;
             border-radius: 10px;
+            font-weight: 500;
+            font-size: 17px;
         }
         ul li:hover{
             background: #fff;

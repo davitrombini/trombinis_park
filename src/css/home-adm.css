@@ -7,7 +7,66 @@
     text-decoration: none;
 }
 
+header{
+    padding: 2rem 1rem !important;
+}
+
+header > h1{
+    font-size: 35px !important;
+}
+
+body{
+    position: relative;
+}
+
+.info-box{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+}
+
+.title{
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.title h2{
+    font-size: 25px;
+    font-weight: 600;
+}
+
 .general-informations{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.users, .products{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    border-radius: 10px;
+    padding: .5rem;
+    color: #fff;
+}
+
+.users{
+    background: cadetblue;
+}
+
+.products{
+    background: orange;
+}
+
+p{
+    font-size: 25px;
 }

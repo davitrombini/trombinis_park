@@ -6,8 +6,10 @@
 
     $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+    $qtd = mysqli_num_rows($result);
+
     if ($result){
-        echo json_encode($rows);
+        echo json_encode($rows, $qtd);
     }
 
     mysqli_close($connection);

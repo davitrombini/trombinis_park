@@ -64,7 +64,7 @@
    
 </body>
 <script>
-   fetch("http://localhost/trombinis_park/controllers/adm/find-products.php", {
+   fetch("http://localhost/trombinis_park/controllers/adm/find-products-initial-page.php", {
       method: "GET"
    })
    .then(response => response.json())
@@ -79,7 +79,7 @@
       header.appendChild(title);
       productList.appendChild(header);
 
-      for (let i = 0; i <= 9; i++) {
+      for (let i = 0; i < response.length; i++) {
          const productContainer = document.createElement("div");
          productContainer.classList.add("product-item");
          productContainer.classList.add("w3-display-container");
@@ -124,14 +124,21 @@
 
       const textVerTodos = document.createElement("h2");
       textVerTodos.innerText = "Ver todos";
-      const seta = document.createElement("p");
-      seta.innerText = "-->";
+      const seta = document.createElement("i");
+      seta.classList.add("big");
+      seta.classList.add("arrow");
+      seta.classList.add("right");
+      seta.classList.add("icon");
+      const link = document.createElement("a");
+      link.appendChild(textVerTodos);
+      link.appendChild(seta);
+
+      link.href = "brinquedos.php";
 
       const productContainer = document.createElement("div");
       productContainer.classList.add("product-item");
 
-      productContainer.appendChild(textVerTodos);
-      productContainer.appendChild(seta);
+      productContainer.appendChild(link);
 
       allProducts.appendChild(productContainer);
       productList.appendChild(allProducts);

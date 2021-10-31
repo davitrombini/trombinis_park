@@ -1,3 +1,15 @@
+.header{
+    background: orange;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.header h2{
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+
 .products-list{
     position: relative;
     margin-top: 3rem;
@@ -8,6 +20,9 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    padding-left: 1.2rem;
+    border: 3px solid orange;
+    border-radius: 0 0 10px 10px;
 }
 
 .product-item, .box-ver-todos{
@@ -19,8 +34,27 @@
     max-width: 37.5vh;
 }
 
+.product-item:last-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.product-item:last-child a{
+    position: relative;
+    bottom: 2rem;
+}
+
+.product-item:last-child h2{
+    font-size: 28px;
+    font-weight: 600;
+}
+
 .product-item:not(:last-child){
-    margin-right: 1.2rem;
+    margin-right: .9rem;
 }
 
 .product-image{

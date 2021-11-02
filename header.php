@@ -14,7 +14,7 @@
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="brinquedos.php">Brinquedos</a></li>
-            <li><a href="#">Sobre</a></li>
+            <li><a href="sobre.php">Sobre</a></li>
             <li><a href="./src/pages/user/my-account.php">Minha Conta</a></li>            
         </ul>
         <div class="nav__icon">

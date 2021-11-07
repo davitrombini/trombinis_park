@@ -13,8 +13,8 @@
     $desc = $received_data["desc"];
     $img = $received_data["img"];
 
-    $query = "insert into products(title, description, img)
-                            values('$title', '$desc', '$img')";
+    $query = "insert into products(title, description, img, views)
+                            values('$title', '$desc', '$img', 0)";
 
     $result = mysqli_query($connection, $query);
 

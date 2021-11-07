@@ -1,3 +1,19 @@
+<?php
+    include_once("./database/connection.php");
+
+    session_start();
+
+    if (isset($_GET["id"])){
+        $id = $_GET["id"];
+        $view = "view".$id;
+    } if (!isset($_SESSION[$view])) {
+        $_SESSION[$view] = 1;
+        $query = "update products set views = views + 1 where id = $id";
+        mysqli_query($connection, $query);
+        mysqli_close($connection);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

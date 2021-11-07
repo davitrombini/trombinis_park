@@ -4,6 +4,7 @@
 <?php include_once('./master_head.php'); ?>
 <link rel="stylesheet" href="src/css/slide.css">
 <link rel="stylesheet" href="src/css/products-home.css">
+<link rel="stylesheet" href="src/css/most-seen-products.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -53,6 +54,10 @@
       </button>
       </div><!--Carrossel-->
 
+      <div class="most-seen-list" id="most-seen-list">
+
+      </div>
+
       <div class="products-list" id="product-list">
 
       </div>
@@ -64,6 +69,72 @@
    
 </body>
 <script>
+   fetch("http://localhost/trombinis_park/controllers/adm/find-most-seen-products.php", {
+      method: "GET"
+   })
+   .then(response => response.json())
+   .then(response => {
+      const allMostSeenProducts = document.createElement("div");
+      allMostSeenProducts.classList.add("most-seen-products");
+      const mostSeenList = document.getElementById("most-seen-list");
+      const seenHeader = document.createElement("div");
+      seenHeader.classList.add("seen-header");
+      const seenTitle = document.createElement("h2");
+      seenTitle.innerText = "Mais Vistos";
+      const seenIcon = document.createElement("i");
+      seenIcon.classList.add("huge");
+      seenIcon.classList.add("orange");
+      seenIcon.classList.add("fire");
+      seenIcon.classList.add("icon");
+      seenHeader.appendChild(seenIcon);
+      seenHeader.appendChild(seenTitle);
+      mostSeenList.appendChild(seenHeader);
+
+      for (let i=0; i < response.length; i++){
+         const seenProductContainer = document.createElement("div");
+         seenProductContainer.classList.add("seen-product-item");
+         seenProductContainer.classList.add("w3-display-container");
+
+         const productImage = document.createElement("img");
+         productImage.classList.add("product-image");
+         productImage.classList.add("w3-round");
+         productImage.classList.add("w3-image");
+
+         const productTitle = document.createElement("h2");
+         productTitle.classList.add("product-title");
+
+         const productButton = document.createElement("a");
+         productButton.classList.add("btn");
+         productButton.classList.add("w3-display-hover");
+
+         const favoriteIcon = document.createElement("i");
+         favoriteIcon.classList.add("huge");
+         favoriteIcon.classList.add("red");
+         favoriteIcon.classList.add("heart");
+         favoriteIcon.classList.add("outline");
+         favoriteIcon.classList.add("icon");
+
+         const favoriteButton = document.createElement("button");
+         favoriteButton.classList.add("fav");
+         favoriteButton.classList.add("w3-display-hover");
+         favoriteButton.appendChild(favoriteIcon);
+
+         productImage.src = response[i].img;
+         productTitle.innerText = response[i].title;
+         productButton.innerHTML = "Ver Detalhes";
+         productButton.href = "ver-detalhes?id=" + response[i].id;
+
+         seenProductContainer.appendChild(productImage);
+         seenProductContainer.appendChild(productTitle);
+         seenProductContainer.appendChild(productButton);
+         seenProductContainer.appendChild(favoriteButton);
+
+         allMostSeenProducts.appendChild(seenProductContainer);
+         mostSeenList.appendChild(allMostSeenProducts);
+      }
+   })
+
+
    fetch("http://localhost/trombinis_park/controllers/adm/find-products-initial-page.php", {
       method: "GET"
    })

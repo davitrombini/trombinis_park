@@ -12,7 +12,6 @@
 #products{
     padding: 2rem;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
 }
@@ -24,6 +23,10 @@
     text-align: center;
     position: relative;
     max-width: 41vh;
+}
+
+.product-item:not(:last-child){
+    margin-right: 3.8rem;
 }
 
 .product-item p{

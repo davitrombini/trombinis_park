@@ -3,5 +3,17 @@
 }
 
 .carousel-inner {
-    max-height: 600px !important;
+     max-height: 500px !important; 
+     /* width: fit-content; */
+     /* height: 500px;
+     width: auto; */
+     background-color: #181818;
+}
+
+.carousel-inner img {
+    display: block !important;
+    max-height: 500px !important;
+    height: 100% !important;
+    width: auto !important;
+    margin: 0 auto;
 }

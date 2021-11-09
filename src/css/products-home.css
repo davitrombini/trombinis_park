@@ -7,7 +7,7 @@
 .header{
     background: orange;
     padding: 25px;
-    border-radius: 10px 10px 0 0;
+    /*border-radius: 10px 10px 0 0;*/
 }
 
 .header h2{
@@ -18,8 +18,8 @@
 
 .products-list{
     position: relative;
-    margin-top: 3rem;
-    padding: .8rem;
+    /*margin-top: 3rem;
+    padding: .8rem;*/
 }
 
 .products{
@@ -27,8 +27,8 @@
     flex-wrap: wrap;
     flex-direction: row;
     padding-left: 1.2rem;
-    border: 3px solid orange;
-    border-radius: 0 0 10px 10px;
+    /*border: 3px solid orange;
+    border-radius: 0 0 10px 10px;*/
 }
 
 .product-item, .box-ver-todos{

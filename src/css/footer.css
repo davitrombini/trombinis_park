@@ -4,7 +4,7 @@
 }
 
 footer{
-    background-image: linear-gradient(to bottom, #C36EE0, #ae35d9);
+    background: #ae35d9;
     color: #fff;
     width: 100%;
     padding: 10px 0;
@@ -23,6 +23,10 @@ footer{
 
 p{
     font-size: 16px;
+}
+
+.link-sobre{
+    color: #fff;
 }
 
 @media only screen and (max-width: 700px){
@@ -44,6 +48,7 @@ p{
         margin-top: 20px;
     }
 }
+
 /*
 @media only screen and (max-width: 1200px){
     .element.endereco {

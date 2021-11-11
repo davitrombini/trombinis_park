@@ -40,13 +40,12 @@
     position: relative;
 }
 
-.product-image:hover {
-    bottom: 4rem;
+.product-item:hover .product-image{
+    transform: translateY(-2.5rem);
+    transition: .5s !important;
 }
 
-.product-image {
-    transition: all .5s !important;
-}
+
 
 .product-item, .box-ver-todos{
     margin: 2.3rem auto;
@@ -85,9 +84,9 @@
     font-weight: 600 !important;
     padding: 10px !important;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: 30% !important;
+    top: 80% !important;
+    transform: translateX(-50%);
     color: limegreen !important;
     background: none;
     border-radius: 12px !important;
@@ -106,7 +105,7 @@
     padding: 10px;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 68% !important;
     background: none;
 }
 

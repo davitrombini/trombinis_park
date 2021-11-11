@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 *{
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif !important;
 }
 
 .header{
-    background: orange;
+    background: rgb(224, 160, 40);
     padding: 25px;
     /*border-radius: 10px 10px 0 0;*/
 }
@@ -29,6 +29,23 @@
     padding-left: 1.2rem;
     /*border: 3px solid orange;
     border-radius: 0 0 10px 10px;*/
+}
+
+.product-item:not(:last-child) {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.product-image, .product-item {
+    position: relative;
+}
+
+.product-image:hover {
+    bottom: 4rem;
+}
+
+.product-image {
+    transition: all .5s !important;
 }
 
 .product-item, .box-ver-todos{

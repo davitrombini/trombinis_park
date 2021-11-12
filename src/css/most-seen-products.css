@@ -35,6 +35,23 @@
     border-radius: 0 0 10px 10px;*/
 }
 
+
+.seen-product-item {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.product-image, .seen-product-item {
+    position: relative;
+}
+
+.seen-product-item:hover .product-image{
+    transform: translateY(-2.5rem);
+    transition: .5s !important;
+}
+
+
+
 .seen-product-item{
     margin: 2.3rem auto;
     /* padding: 1rem;*/

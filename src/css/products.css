@@ -5,15 +5,18 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif !important;
     text-decoration: none;
+}
+
+body{
+    font-family: "Poppins", sans-serif !important;
 }
 
 #products{
     padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px 8px;
 }
 
 .product-item {

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
-*{
+body{
     font-family: "Poppins", sans-serif !important;
 }
 
@@ -23,10 +23,10 @@
 }
 
 .products{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding-left: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px 8px;
+    padding: 0 2rem;
     /*border: 3px solid orange;
     border-radius: 0 0 10px 10px;*/
 }

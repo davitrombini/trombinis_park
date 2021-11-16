@@ -10,7 +10,7 @@
 <body>
   <header id="header" role="heading">
     <nav>
-        <h1 class="logo">Trombini's Park</h1>
+        <h1 class="logo"><img src="img/logo/logo 1.png" alt="Trombini's Park"></h1>
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="brinquedos.php">Brinquedos</a></li>

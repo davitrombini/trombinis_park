@@ -36,6 +36,13 @@ h1 {
   margin-right: auto;
   font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
+  display: block;
+}
+
+header h1 img{
+  display: block;
+  height: 70px;
+  padding-top: 10px;
 }
 
 ul {

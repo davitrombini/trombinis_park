@@ -34,7 +34,6 @@
             const productImage = document.createElement("img");
             productImage.classList.add("product-image");
             productImage.classList.add("w3-round");
-            productImage.classList.add("w3-image");
 
             const productTitle = document.createElement("h2");
             productTitle.classList.add("product-title");

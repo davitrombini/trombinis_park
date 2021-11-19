@@ -17,8 +17,6 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px 8px;
-    object-fit: cover;
-    aspect-ratio: 4/3;
     align-self: stretch;
 }
 
@@ -37,7 +35,9 @@ body{
 }
 
 .product-image{
-    width: 40vh;
+    width: fit-content;
+    object-fit: scale-down;
+    aspect-ratio: 3 / 3;
 }
 
 .product-item:hover .product-image{
@@ -74,7 +74,7 @@ body{
     padding: 10px !important;
     position: absolute;
     left: 30% !important;
-    top: 65% !important;
+    top: 60% !important;
     transform: translateX(-50%);
     color: limegreen !important;
     background: none;
@@ -95,7 +95,7 @@ body{
     padding: 10px;
     position: absolute;
     right: 0;
-    top: 60% !important;
+    top: 55% !important;
     background: none;
 }
 

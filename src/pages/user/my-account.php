@@ -24,7 +24,7 @@
         </div>
         <div class="content">
             <div id="label-email" class="ui label element" style="font-size: 16px; font-weight: 600;"><i class="mail icon"></i></div>
-            <div class="favorites element"><a href="#">Favoritos</a></div>
+            <div class="favorites element"><a href="../../../favoritos.php">Favoritos</a></div>
             <div class="config element" onclick="document.getElementById('id01').style.display = 'block';"><a>Informações da conta</a></div>
             <a href="../../../controllers/user/logout.php">
                 <button class="negative ui right labeled icon button">

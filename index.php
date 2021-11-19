@@ -99,9 +99,6 @@
          productImage.classList.add("product-image");
          productImage.classList.add("w3-round");
 
-         const productTitle = document.createElement("h2");
-         productTitle.classList.add("product-title");
-
          const productButton = document.createElement("a");
          productButton.classList.add("btn");
          productButton.classList.add("w3-display-hover");
@@ -113,20 +110,27 @@
          favoriteIcon.classList.add("outline");
          favoriteIcon.classList.add("icon");
 
-         const favoriteButton = document.createElement("button");
+         const favoriteButton = document.createElement("a");
          favoriteButton.classList.add("fav");
          favoriteButton.classList.add("w3-display-hover");
          favoriteButton.appendChild(favoriteIcon);
+
+         const divBtnImg = document.createElement("div");
+         divBtnImg.appendChild(favoriteButton);
+         divBtnImg.appendChild(productButton);
+         divBtnImg.appendChild(productImage);
+
+         const productTitle = document.createElement("h2");
+         productTitle.classList.add("product-title");
 
          productImage.src = response[i].img;
          productTitle.innerText = response[i].title;
          productButton.innerHTML = "Ver Detalhes";
          productButton.href = "ver-detalhes?id=" + response[i].id;
+         favoriteButton.href = "controllers/user/criar-favorito?id=" + response[i].id;
 
-         seenProductContainer.appendChild(productImage);
+         seenProductContainer.appendChild(divBtnImg);
          seenProductContainer.appendChild(productTitle);
-         seenProductContainer.appendChild(productButton);
-         seenProductContainer.appendChild(favoriteButton);
 
          allMostSeenProducts.appendChild(seenProductContainer);
          mostSeenList.appendChild(allMostSeenProducts);
@@ -173,7 +177,7 @@
          favoriteIcon.classList.add("outline");
          favoriteIcon.classList.add("icon");
 
-         const favoriteButton = document.createElement("button");
+         const favoriteButton = document.createElement("a");
          favoriteButton.classList.add("fav");
          favoriteButton.classList.add("w3-display-hover");
          favoriteButton.appendChild(favoriteIcon);
@@ -182,6 +186,7 @@
          productTitle.innerText = response[i].title;
          productButton.innerHTML = "Ver Detalhes";
          productButton.href = "ver-detalhes?id=" + response[i].id;
+         favoriteButton.href = "controllers/user/criar-favorito?id=" + response[i].id;
 
          productContainer.appendChild(productImage);
          productContainer.appendChild(productTitle);

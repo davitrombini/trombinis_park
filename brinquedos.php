@@ -52,7 +52,7 @@
             favoriteIcon.classList.add("outline");
             favoriteIcon.classList.add("icon");
 
-            const favoriteButton = document.createElement("button");
+            const favoriteButton = document.createElement("a");
             favoriteButton.classList.add("fav");
             favoriteButton.classList.add("w3-display-hover");
             favoriteButton.appendChild(favoriteIcon);
@@ -62,6 +62,7 @@
             productDescription.innerText = product.description;
             productButton.innerHTML = "Ver Detalhes";
             productButton.href = "ver-detalhes?id=" + product.id;
+            favoriteButton.href = "controllers/user/criar-favorito?id=" + product.id;
 
             productContainer.appendChild(productImage);
             productContainer.appendChild(productTitle);

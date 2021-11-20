@@ -42,7 +42,7 @@ body{
 }
 
 .product-item:hover .product-image{
-    transform: translateY(-2.5rem);
+    transform: translateY(-2.2rem);
     transition: .5s !important;
 }
 

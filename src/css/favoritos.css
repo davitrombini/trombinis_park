@@ -89,7 +89,7 @@ body{
 }
 
 .product-item .product-image{
-    max-width: 40vh;
+    width: 100%;
 }
 
 .btn{

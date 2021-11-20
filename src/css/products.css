@@ -35,7 +35,7 @@ body{
 }
 
 .product-image{
-    width: fit-content;
+    width: 100%;
     object-fit: scale-down;
     aspect-ratio: 3 / 3;
 }
@@ -62,10 +62,6 @@ body{
     text-overflow: ellipsis;
     white-space: nowrap;
     padding: 10px;
-}
-
-.product-item .product-image{
-    max-width: 40vh;
 }
 
 .btn{

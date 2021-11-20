@@ -43,7 +43,7 @@ table{
     left: 50%;
     transform: translateX(-50%);
     color: black;
-    width: 80%;
+    width: 50%;
 }
 
 table, th, td{
@@ -71,7 +71,8 @@ tr:nth-child(even){
 
 table .btn-delet, .btn-edit{
     padding: 10px;
-    display: block;
+    display: inline-block;
+    width: 50%;
     text-align: center;
     color: #fff;
     transition: all .2s ease-in;

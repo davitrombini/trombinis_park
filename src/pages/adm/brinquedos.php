@@ -28,7 +28,6 @@
                 <tr>
                     <th>ID</th>
                     <th>Título</th>
-                    <th>Descrição</th>
                     <th>Ação</th>
                 </tr>
             </thead>
@@ -50,7 +49,6 @@
             const productRow = document.createElement("tr");
             const productId = document.createElement("td");
             const productTitle = document.createElement("td");
-            const productDesc = document.createElement("td");
 
             const btnEdit = document.createElement("a");
             btnEdit.classList.add("btn-edit");
@@ -60,7 +58,6 @@
 
             productId.innerText = product.id;
             productTitle.innerText = product.title;
-            productDesc.innerText = product.description;
             btnEdit.innerText = "Editar";
             btnEdit.href = "edit-product?id=" + product.id;
             btnDelet.innerText = "Deletar";
@@ -68,7 +65,6 @@
         
             productRow.appendChild(productId);
             productRow.appendChild(productTitle);
-            productRow.appendChild(productDesc);
             productRow.appendChild(btnEdit);
             productRow.appendChild(btnDelet);
 

@@ -87,7 +87,7 @@ body{
     padding: 10px !important;
     position: absolute;
     left: 30% !important;
-    top: 75% !important;
+    top: 70% !important;
     transform: translateX(-50%);
     color: limegreen !important;
     background: none;
@@ -107,7 +107,7 @@ body{
     padding: 10px;
     position: absolute;
     right: 0;
-    top: 63% !important;
+    top: 58% !important;
     background: none;
 }
 

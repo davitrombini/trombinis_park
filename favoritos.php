@@ -85,7 +85,7 @@
                 productTitle.innerText = response[i].title;
                 productDescription.innerText = response[i].description;
                 productButton.innerHTML = "Ver Detalhes";
-                productButton.href = "ver-detalhes?id=" + response[i].id;
+                productButton.href = "ver-detalhes.php?id=" + response[i].id;
                 favoriteButton.href = "controllers/user/delete-fav.php?id=" + response[i].id;
 
                 productContainer.appendChild(productImage);

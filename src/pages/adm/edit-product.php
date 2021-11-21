@@ -43,6 +43,19 @@
     </main>
 </body>
 <script>
-  
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+    
+    fetch(`http://localhost/trombinis_park/controllers/adm/find-product.php?id=${productId}`, {
+        method: "GET"
+    })
+    .then(response => response.json())
+    .then(response => {
+        document.getElementById("product-title").value = response.title;
+        document.getElementById("product-desc").value = response.description;
+        document.getElementById("product-img").value = response.img;
+    })
+
+    
 </script>
 </html>

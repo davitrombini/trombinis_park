@@ -31,8 +31,8 @@
                 <label for="product-desc">Descrição:</label><br>
                 <textarea name="product-desc" id="product-desc" cols="30" rows="5" maxlength="255" required></textarea><br>
 
-                <label for="product-img">Link imagem:</label><br>
-                <input type="url" name="product-img" id="product-img" maxlength="255" required><br>
+                <label for="product-img">Imagem:</label><br>
+                <input type="file" name="product-img" id="product-img" maxlength="255" required><br>
 
                 <div class="buttons">
                     <input type="submit" value="Salvar">

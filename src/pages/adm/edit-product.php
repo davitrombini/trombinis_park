@@ -24,7 +24,7 @@
                 <h2>Editar Brinquedo</h2>
             </header>
             
-            <form id="edit-product-form">
+            <form id="edit-product-form" action="./controllers/adm/update-product.php">
                 <label for="product-title">Título:</label><br>
                 <input type="text" name="product-title" id="product-title" maxlength="255" required><br>
 
@@ -43,45 +43,6 @@
     </main>
 </body>
 <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('id');
-    
-    fetch(`http://localhost/trombinis_park/controllers/adm/find-product.php?id=${productId}`, {
-        method: "GET"
-    })
-    .then(response => response.json())
-    .then(response => {
-        document.getElementById("product-title").value = response.title;
-        document.getElementById("product-desc").value = response.description;
-        document.getElementById("product-img").value = response.img;
-    })
-
-    document.getElementById("edit-product-form").addEventListener("submit", function (e){
-        e.preventDefault();
-
-        const data = {
-            id: Number.parseInt(productId),
-            title: document.getElementById("product-title").value,
-            desc: document.getElementById("product-desc").value,
-            img: document.getElementById("product-img").value
-        } 
-
-        fetch("http://localhost/trombinis_park/controllers/adm/update-product.php", {
-            method: "PATCH",
-            redirect: "follow",
-            body: JSON.stringify(data)
-        })
-        .then(async (response) => {
-            if(response.redirected) {
-                window.location.href = response.url;
-            } else {
-                const jsonResponse = await response.json();
-                alert(jsonResponse.message);
-            }
-        })
-        .catch((error) => {
-            alert(`${error.message}`);
-        });
-    })
+  
 </script>
 </html>

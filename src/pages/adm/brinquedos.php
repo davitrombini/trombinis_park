@@ -59,7 +59,7 @@
             productId.innerText = product.id;
             productTitle.innerText = product.title;
             btnEdit.innerText = "Editar";
-            btnEdit.href = "edit-product?id=" + product.id;
+            btnEdit.href = "edit-product.php?id=" + product.id;
             btnDelet.innerText = "Deletar";
             btnDelet.href = "../../../controllers/adm/process.php?delete-product=" + product.id;
         

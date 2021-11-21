@@ -27,22 +27,22 @@
          <div class="carousel-item active">
             <img src="img/slides/0.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-            <h5>Brinquedo 1</h5>
-            <p>Descrição</p>
+            <h1>Pula-Pula Aventura do Mickey</h1>
+            <p>Pula-Pula + Escorregador</p>
             </div>
          </div>
          <div class="carousel-item">
             <img src="img/slides/1.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
+            <h1>Combo Dino 3 em 1</h1>
+            <p>Pula-Pula + Escorregador + Piscina de Bolinhas</p>
             </div>
          </div>
          <div class="carousel-item">
             <img src="img/slides/2.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
+            <h1>Parque do Mickey</h1>
+               <p>Pluto inflável + Escalada + Escorregador + João bobo + Pula-Pula.</p>
             </div>
          </div>
       </div>
@@ -126,8 +126,8 @@
          productImage.src = response[i].img;
          productTitle.innerText = response[i].title;
          productButton.innerHTML = "Ver Detalhes";
-         productButton.href = "ver-detalhes?id=" + response[i].id;
-         favoriteButton.href = "controllers/user/criar-favorito?id=" + response[i].id;
+         productButton.href = "ver-detalhes.php?id=" + response[i].id;
+         favoriteButton.href = "controllers/user/criar-favorito.php?id=" + response[i].id;
 
          seenProductContainer.appendChild(divBtnImg);
          seenProductContainer.appendChild(productTitle);
@@ -185,8 +185,8 @@
          productImage.src = response[i].img;
          productTitle.innerText = response[i].title;
          productButton.innerHTML = "Ver Detalhes";
-         productButton.href = "ver-detalhes?id=" + response[i].id;
-         favoriteButton.href = "controllers/user/criar-favorito?id=" + response[i].id;
+         productButton.href = "ver-detalhes.php?id=" + response[i].id;
+         favoriteButton.href = "controllers/user/criar-favorito.php?id=" + response[i].id;
 
          productContainer.appendChild(productImage);
          productContainer.appendChild(productTitle);

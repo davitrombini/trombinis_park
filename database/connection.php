@@ -1,7 +1,7 @@
 <?php
   $server = "localhost";
   $user = "root";
-  $password = "admin";
+  $password = "";
   $database_name = "bd_trombinis_park";
   $connection = mysqli_connect($server, $user, $password, $database_name);
 

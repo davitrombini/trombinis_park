@@ -2,7 +2,7 @@
     session_start();
 
     if ($_SESSION["user_id"] != 1){
-        header("Location: http://localhost/trombinis_park/");
+        //header("Location: http://localhost/trombinis_park/");
     }
 ?>
 
@@ -23,13 +23,13 @@
             <header class="form-header">
                 <h2>Cadastrar Brinquedo</h2>
             </header>
-            <form id="create-product">
+            <form id="create-product" method="POST" enctype="multipart/form-data" action=".../controllers/adm/create-product.php">
                 <label for="product-title">Título:</label><br>
                 <input type="text" name="product-title" id="product-title" maxlength="255" required><br>
                 <label for="product-desc">Descrição:</label><br>
                 <textarea name="product-desc" id="product-desc" maxlength="255" cols="30" rows="5" style="resize: none;" required></textarea><br>
-                <label for="product-img">Link da imagem:</label><br>
-                <input type="url" name="product-img" id="product-img" maxlength="255" required><br>
+                <label for="product-img">Imagem:</label><br>
+                <input type="file" name="product-img" id="product-img" required><br>
                 <div class="btn-create">
                     <input type="submit" value="Cadastrar">
                 </div>
@@ -39,6 +39,7 @@
 </body>
 <script>
     document.getElementById("create-product").addEventListener("submit", function (e){
+        /*
         e.preventDefault();
 
         const data = {
@@ -63,6 +64,8 @@
         .catch((error) => {
             alert(`${error.message}`);
         });
+
+        */
     });
 </script>
 </html>

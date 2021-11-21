@@ -24,8 +24,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/ver-detalhes.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="./semantic/dist/semantic.min.css">
+
+
+    <!-- jQuery -->
+    <script src = "./node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Fomantic Ui -->
+    <link rel="stylesheet" type="text/css" href="./semantic/dist/semantic.min.css">
     <script src="./semantic/dist/semantic.min.js"></script>
+
+
 </head>
 <body>
     <?php include_once("header.php"); ?>
@@ -41,6 +48,9 @@
                     <div class="title">
                         <h1 id="title"></h1>
                     </div>
+
+                    <!-- share -->
+
 
                     <div class="desc">
                         <h2>Descrição:</h2>
@@ -72,6 +82,7 @@
             </div>
         </div>
     </main>
+    <?php include('./footer.php'); ?>
 </body>
 <script>
     const urlParams = new URLSearchParams(window.location.search);

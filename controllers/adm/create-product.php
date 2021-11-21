@@ -7,11 +7,23 @@
 
     include_once("../../database/connection.php");
 
-    $received_data = json_decode(file_get_contents("php://input"), true);
+    
 
-    $title = $received_data["title"];
-    $desc = $received_data["desc"];
-    $img = $received_data["img"];
+    $title = $_POST["title"];
+    $desc = $_POST["desc"];
+    $img = $_POST["img"];
+
+
+    print_r($_REQUEST);die;
+    $target_dir = "../img/products";
+    $target_dir = $target_dir . basename( $_FILES["uploadFile"]["name"]);
+    $uploadOk=1;
+
+    if (move_uploaded_file($_FILES["uploadFile"]["tmp_name"], $target_dir)) {
+        echo "The file ". basename( $_FILES["uploadFile"]["name"]). " has been uploaded.";
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
 
     $query = "insert into products(title, description, img, views)
                             values('$title', '$desc', '$img', 0)";

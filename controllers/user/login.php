@@ -10,15 +10,17 @@ $query = "select * from users where email = '$email'";
 $result = mysqli_query($connection, $query);
 
 $db_user = mysqli_fetch_assoc($result);
-$db_user_password = $db_user['password'];
 
-$matching_password = password_verify($password, $db_user_password);
 
 if (mysqli_num_rows($result) != 1) {
     $response = array("message" => "Usuário inexistente!");
     echo json_encode($response);
     exit();
 } 
+
+$db_user_password = $db_user['password'];
+
+$matching_password = password_verify($password, $db_user_password);
 
 if($matching_password) {
     session_start();

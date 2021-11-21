@@ -101,5 +101,12 @@
     .catch(error => {
         alert(`${error.message}`);
     });
+
 </script>
+
+<style>    
+.product-title {
+    top: 20px;
+}
+</style>   
 </html>

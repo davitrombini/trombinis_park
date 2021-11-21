@@ -35,6 +35,13 @@
             productImage.classList.add("product-image");
             productImage.classList.add("w3-round");
 
+              // click on image
+            let ImageLink = "ver-detalhes.php?id=" + product.id;
+            productImage.addEventListener('click', function() { 
+                location.href = ImageLink;
+            }, false);
+
+
             const productTitle = document.createElement("h2");
             productTitle.classList.add("product-title");
 

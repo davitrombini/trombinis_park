@@ -35,9 +35,11 @@ body{
 }
 
 .product-image{
+    cursor: pointer;
     width: 100%;
     object-fit: scale-down;
     aspect-ratio: 3 / 3;
+    
 }
 
 .product-item:hover .product-image{

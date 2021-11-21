@@ -99,6 +99,13 @@
          productImage.classList.add("product-image");
          productImage.classList.add("w3-round");
 
+
+         // click on image
+         let ImageLink = "ver-detalhes.php?id=" + response[i].id;
+         productImage.addEventListener('click', function() { 
+            location.href = ImageLink;
+          }, false);
+
          const productButton = document.createElement("a");
          productButton.classList.add("btn");
          productButton.classList.add("w3-display-hover");
@@ -162,6 +169,12 @@
          productImage.classList.add("product-image");
          productImage.classList.add("w3-round");
          productImage.classList.add("w3-image");
+
+         // click on image
+         let ImageLink = "ver-detalhes.php?id=" + response[i].id;
+         productImage.addEventListener('click', function() { 
+            location.href = ImageLink;
+          }, false);
 
          const productTitle = document.createElement("h2");
          productTitle.classList.add("product-title");

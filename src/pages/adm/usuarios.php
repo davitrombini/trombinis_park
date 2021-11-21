@@ -2,7 +2,7 @@
     session_start();
 
     if ($_SESSION["user_id"] != 1){
-        header("Location: http://localhost/trombinis_park/");
+       // header("Location: http://localhost/trombinis_park/");
     }
 ?>
 

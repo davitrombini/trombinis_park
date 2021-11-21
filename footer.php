@@ -14,7 +14,7 @@
 
         <div class="element endereco">
             <h2>Endereço</h2>
-            <p>Rua Ubaldo Damiano, 270 | Jaú/SP - CEP: 17204281</p>
+            <p><address> Ubaldo Damiano, 270 | Jaú/SP - CEP: 17204281</address></p>
         </div><!--
 
      --><div class="element contatos">
@@ -28,7 +28,8 @@
 
      --><div class="element sobre">
             <h2>Sobre</h2>
-            <p>A Trombini's Park é uma empresa que aluga brinquedos para festas infantis</p>
+            <p>A Trombini's Park é uma empresa que aluga brinquedos para festas infantis. <br>
+            <?= date("Y"). " - todos os direitos reservados.";?></p>
         </div>
 
     </footer>

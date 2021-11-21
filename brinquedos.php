@@ -61,8 +61,8 @@
             productTitle.innerText = product.title;
             productDescription.innerText = product.description;
             productButton.innerHTML = "Ver Detalhes";
-            productButton.href = "ver-detalhes?id=" + product.id;
-            favoriteButton.href = "controllers/user/criar-favorito?id=" + product.id;
+            productButton.href = "ver-detalhes.php?id=" + product.id;
+            favoriteButton.href = "controllers/user/criar-favorito.php?id=" + product.id;
 
             productContainer.appendChild(productImage);
             productContainer.appendChild(productTitle);

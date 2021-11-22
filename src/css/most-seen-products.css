@@ -64,8 +64,6 @@
 .product-image{
     width: 100%;
     cursor: pointer;
-    border-top-left-radius: 18%!important;
-    border-top-right-radius: 18%!important;
 }
 
 .btn{

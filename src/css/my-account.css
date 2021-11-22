@@ -61,6 +61,10 @@ body{
     font-weight: 600 !important;
 }
 
+.bt-site a:hover{
+    color: #f2f2f2;
+}
+
 .w3-center{
     margin-top: 1.6rem;
 }

@@ -11,7 +11,7 @@
         $product_id = $_GET["id"];
         $user_id = $_SESSION["user_id"];
 
-        $find = "select * from favorites where product_id = $product_id";
+        $find = "select * from favorites where product_id = $product_id and user_id = $user_id";
         $result = mysqli_query($connection, $find);
         $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
         $qtd = mysqli_num_rows($result);

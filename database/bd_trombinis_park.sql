@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Tempo de geração: 20-Nov-2021 às 21:34
--- Versão do servidor: 10.6.4-MariaDB
--- versão do PHP: 7.3.21
+-- Host: 127.0.0.1
+-- Tempo de geração: 22-Nov-2021 às 19:29
+-- Versão do servidor: 10.4.21-MariaDB
+-- versão do PHP: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,13 +27,20 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `favorites`
 --
 
-DROP TABLE IF EXISTS `favorites`;
-CREATE TABLE IF NOT EXISTS `favorites` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `favorites` (
+  `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3;
+  `product_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `favorites`
+--
+
+INSERT INTO `favorites` (`id`, `user_id`, `product_id`) VALUES
+(21, 2, 13),
+(29, 1, 21),
+(30, 1, 14);
 
 -- --------------------------------------------------------
 
@@ -41,30 +48,28 @@ CREATE TABLE IF NOT EXISTS `favorites` (
 -- Estrutura da tabela `products`
 --
 
-DROP TABLE IF EXISTS `products`;
-CREATE TABLE IF NOT EXISTS `products` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   `img` varchar(255) NOT NULL,
-  `views` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
+  `server_img` varchar(255) DEFAULT NULL,
+  `views` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `products`
 --
 
-INSERT INTO `products` (`id`, `title`, `description`, `img`, `views`) VALUES
-(2, 'Parque do Mickey', 'O Parque do Mickey é muito interativo e possui diversas atividades como o Pluto inflável, escalada com escorregador, joão bobo do Pateta, parede vazada e pula-pula. Dimensões: 5,00(C) x 4,50(L) x 2,30(A)m, Peso: 95Kg, Capacidade: 3 usuários.', 'https://lh3.googleusercontent.com/pw/AM-JKLXHLgEb-2Cr9ITzSEa3701h4tLx0cDV64pDrIGJgdnUU_7yhAvj8OmPJG9HaiRsjea1TaSw05dO1iynehQFiEo3yqU0nFibMnb3qjGImhpZ7ayzL8P9odkczTugyDxJhJJI3WpoMPqqCZSkWDkB6RDomQ=w876-h657-no', 4),
-(3, 'Piscina de Bolinhas do Mickey', 'A piscina de Bolinhas Inflável Mickey, da Play Park, é confeccionada em Master Lona Play (fio 1000), o que a deixa ainda mais leve e resistente, se comparada a outros brinquedos da sua linhagem. Acompanha 500 bolinhas e motor compatível ao brinquedo.', 'https://lh3.googleusercontent.com/pw/AM-JKLWYem8OkKxsdeMnCyCMRWKg0k83dgwD1FkFnroGxg__jSVo55a8ABlNrwyDT0OvsSabKUI14PYpviZZI3ty9-G53WCwgMbozJdTrxgAiFkCLLN_Qc6gQC4uL9_7pheLf_gGWkdd6HpiAIpqos3EHcJQ9w=w876-h657-no', 5),
-(4, 'Cama Elástica', 'Suporta até 95 kg, sua lona é super resistente, pode ser desmontada, possui tubos redondos reforçados com sistema de encaixe macho fêmea, dispensando o uso de qualquer ferramenta para sua montagem. Ideal para buffets, condomínios, clubes, etc.', 'https://lh3.googleusercontent.com/pw/AM-JKLWKIAhLFiz22bmhN-MsU8nOiTyAGEQbm-lUatM9fnQUTjdeVVa_pgOSAatud7d-k832LNfTx7ElmKlVp6NC1tZJfRUKAj460Bc_JXURYFax3_wUMvsYpVpP_HqrWXCBdnXU4gnG0ieMgCc8tc9NNzZ9kA=w876-h657-no', 4),
-(5, 'Piscina de Bolinhas', 'Sua estrutura recebe revestimento de espuma, tornando o brinquedo mais seguro. A estrutura metálica é galvanizada, dando maior vida útil ao brinquedo. Dimensões: 1,50(C) x 1,50(L) x 1,98(A)m, Peso: 96Kg, Capacidade: 3 usuários.', 'https://lh3.googleusercontent.com/pw/AM-JKLWpCfcEYJtIXq_ZLKRuXcd6_-haHPjsvvduvDl1MnXaIyaDYmclAQT_ar6oKZXRPVkn3Ozuqpw7pP2nR-Y4-0cBqbEeR_KMefHGOFM7-c6wcAuTZQrvNhOfn_SGrOMSBVIADvnuHUWlHsIGxlE44SWdAg=w876-h657-no', 3),
-(6, 'Tobogã Hiper', 'É um escorregador 100% inflável. Possui escada frontal com parede para separar da área do escorregador. O telhado em forma de capela proporciona total segurança, evitando que as crianças pulem ou desçam do brinquedo. Dimensões: 6,50(C) x 3,50(L) x 5,00(A)', 'https://lh3.googleusercontent.com/pw/AM-JKLWQUBQrrr5QtUgVnIOiSakQ0WsECCUQx_aLoBEYZdpJ2E3xHTbAinZpWm1KLE71W2NmaFqulO_bV2Un5whn-615WIEwjgvz00-kF9qcx_Z0KpjIhPUL2s1AQ9cd7GzJOSq5ltwqgPVtVW-nLxb0PF0RNQ=w876-h657-no', 2),
-(7, 'Combo 3 em 1 Dino', 'Equipado com três atividades: Pula-Pula + Piscina de Bolinhas + Parede de Escalada com escorrega, é um dos novos lançamentos da Play Park. Aprendizado e diversão, juntos em um só brinquedo! Dimensões: 5,40(C) x 3,60(L) x 3,20(A)m Capacidade: 3 usuários', 'https://lh3.googleusercontent.com/pw/AM-JKLWOGwJ3B0p_E3-c4Po9opUbiCFLcuLQiot0N-EfJguH6S2XCfJOpHElWElPU_8839MTIYn9uRMsyQXZ7AaIud8NLcZ8_ydicvYQv5uqs3rw4vofDiapWFco-HIlpFjEK-PYmM-h-A7DdbRdkIhKDP-aWA=w876-h657-no?authuser=0', 4),
-(8, 'Área Kids', 'Ideal para espaço baby em buffets e escolas, pois auxilia na coordenação motora das crianças, proporcionando uma diversão com total segurança. Idade sugerida: a partir de 1 ano.', 'https://lh3.googleusercontent.com/pw/AM-JKLXN_tr9h5hlU1KkcGJo7_8hSCAvze-Tg5FmerQ5vgWy6XI-aVQoBB_0YsxOOgdWuca6hNMtbCLA4wwyWU9o5FDFagW_jXRvz3sldjWJQVhB_90IlrTZQKEmCWDcQKZKN5-PRiTD-bE_aMaoLqxgkLj8eA=w876-h657-no?authuser=0', 1),
-(9, 'Tobogã Super', 'É um escorregador 100% inflável. Possui escada frontal com parede para separar da área do escorregador. O telhado em forma de capela proporciona total segurança, evitando que as crianças pulem ou desçam do brinquedo. Dimensões: 5,00(C) x 2,80(L) x 3,70(A)', 'https://lh3.googleusercontent.com/pw/AM-JKLVmDF6kmtRWAK5euTSYFpx2MPeR83s89mefoxwP84yOSOQgLcCUeiDe2Yx0VUBF2u66KQRpTmsFN6OU1T9Oz8X0Mpiv2WUjfCm82vM6H6WZ-AAcworxxmJpCLXUopTuUBbkdkudpfAls-AZdMY_r1VYLw=w876-h657-no?authuser=0', 4),
-(10, 'Teste 9', '1asdasdasd', 'http://pngimg.com/uploads/trampoline/trampoline_PNG32.png', 0);
+INSERT INTO `products` (`id`, `title`, `description`, `img`, `server_img`, `views`) VALUES
+(14, 'Dino 3 em 1', 'Esse é o principal motivo dos dinossauros fascinarem tanto os pequenos. E é também o principal motivo pelo qual também é um grande sucesso! Equipado com: Pula-Pula + Piscina de Bolinhas + Parede de Escalada com escorrega. Aprendizado e diversão!', 'http://localhost/trombinis_park/img/products/IMG-20211118-WA0000.jpg', 'C:/xampp/htdocs/trombinis_park/img/products/IMG-20211118-WA0000.jpg', 2),
+(16, 'Pula-Pula Castelinho', ' As crianças se encantam com esse brinquedo em formato de castelo, multicolorido e imprescindível em qualquer festa. ', 'http://localhost/trombinis_park/img/products/IMG-20211118-WA0004.jpg', 'C:/xampp/htdocs/trombinis_park/img/products/IMG-20211118-WA0004.jpg', 1),
+(17, 'Escorregador Croco', ' Uma opção diferente de tobogã é o Crocogã, que possui uma forma divertida de crocodilo e tematizado que deixa o brinquedo ainda mais atraente. Sucesso desde o seu lançamento é diversão garantida pra garotada.', 'http://localhost/trombinis_park/img/products/IMG-20211120-WA0052.jpg', 'C:/xampp/htdocs/trombinis_park/img/products/IMG-20211120-WA0052.jpg', 2),
+(19, 'Piscina de Bolinhas do Mickey', ' Mickey Mouse é um dos personagens mais populares do mundo e fará um grande sucesso em sua festa/evento! Esse desenho animado se tornou o símbolo da Companhia Walt Disney, a partir de 1928, tornando-se uma das figuras mais conhecidas da cultura Pop. ', 'http://localhost/trombinis_park/img/products/IMG-20211118-WA0012.jpg', 'C:/xampp/htdocs/trombinis_park/img/products/IMG-20211118-WA0012.jpg', 1),
+(20, 'Área Baby', ' Área baby com gangorras, tapetes E.V.A e escorregador', 'http://localhost/trombinis_park/img/products/IMG-20211118-WA0007.jpg', 'C:/xampp/htdocs/trombinis_park/img/products/IMG-20211118-WA0007.jpg', 1),
+(21, 'Cama Elástica 2,5 metros', ' Divirta-se muito com esta cama elástica que pode ser usada por pessoas de qualquer idade. Ela suporta até 95 kg, ideal para buffets, condomínios, clubes, residências, hotéis, eventos em geral, etc.', 'http://localhost/trombinis_park/img/products/IMG-20211120-WA0047.jpg', 'C:/xampp/htdocs/trombinis_park/img/products/IMG-20211120-WA0047.jpg', 2),
+(22, 'Pula-Pula Aventura do Mickey', ' Um dos personagens mais queridos da Disney chegou para fazer a diversão da garotada. O Pula Pula Aventura Mickey é um brinquedo inflável temático muito seguro e resistente. Saia na frente de sua concorrência e seja referencia em diversão com um produto d', 'http://localhost/trombinis_park/img/products/IMG-20211118-WA0006.jpg', 'C:/xampp/htdocs/trombinis_park/img/products/IMG-20211118-WA0006.jpg', 2),
+(24, 'Parque do Mickey', 'Mickey e seus amigos trazem todo encanto e magia neste brinquedo que é pura diversão. Com acabamento em impressão digital a garotada irá se sentir dentro do desenho animado. O Parque do Mickey é muito interativo e possui diversas atividades como o Pluto i', 'http://localhost/trombinis_park/img/products/IMG-20211118-WA0008.jpg', 'C:/xampp/htdocs/trombinis_park/img/products/IMG-20211118-WA0008.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -72,22 +77,65 @@ INSERT INTO `products` (`id`, `title`, `description`, `img`, `views`) VALUES
 -- Estrutura da tabela `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `admin` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+  `admin` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `admin`) VALUES
-(1, 'teste', 'teste@email.com', '$2y$10$MRU7kNVU9HYbCxhBZzJC6uVlfz1EKU.iv7S5RSY4A1xcLwOWOCptm', 1);
+(1, 'teste', 'teste@email.com', '$2y$10$MRU7kNVU9HYbCxhBZzJC6uVlfz1EKU.iv7S5RSY4A1xcLwOWOCptm', 1),
+(2, 'a', '1@a.com', '$2y$10$ikHyzUQVhsO4JEDFoLcxcuFdGPzI0WIHzeOwoUcdncoOfVgPuHpA2', 0);
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `favorites`
+--
+ALTER TABLE `favorites`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `favorites`
+--
+ALTER TABLE `favorites`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT de tabela `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT de tabela `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

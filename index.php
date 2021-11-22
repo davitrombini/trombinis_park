@@ -32,8 +32,6 @@ $products = mysqli_fetch_assoc($result);
          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-
-         <!--
          <div class="carousel-item active">
             <img src="img/slides/0.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
@@ -41,24 +39,6 @@ $products = mysqli_fetch_assoc($result);
             <p>Pula-Pula + Escorregador</p>
             </div>
          </div>
-
-         -->
-
-         <?php
-         //montando carrossel
-         for($i = 0; $i < sizeof($products); $i++){ ?>
-            <div class="carousel-item <?php if($i == 0){ echo "active"; } ?> ">
-               <img src="<?= $products['img'];?>" class="d-block w-100" alt="...">
-               <div class="carousel-caption d-none d-md-block">
-               <h1><?= $products['title'];?></h1>
-               <p><?= $products['description'];?></p>
-               </div>
-            </div>
-          <?php } ?>  
-   
-
-
-         <!--
          <div class="carousel-item">
             <img src="img/slides/1.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
@@ -80,8 +60,11 @@ $products = mysqli_fetch_assoc($result);
       <button class="carousel-control-next controls-style" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
          <i class="fa fa-chevron-right"></i>
       </button>
-         -->
       </div><!--Carrossel-->
+      
+    
+        
+        
 
       <div class="most-seen-list" id="most-seen-list">
 

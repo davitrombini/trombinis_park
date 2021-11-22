@@ -56,6 +56,7 @@
                 <a href="index.php"><li>Home</li></a>
                 <a href="usuarios.php"><li>Usuários</li></a>
                 <a href="brinquedos.php"><li>Brinquedos</li></a>
+                <a href="http://localhost/trombinis_park/"><li>Ir para o site</li></a>
             </ul>
         </nav>
     </header>

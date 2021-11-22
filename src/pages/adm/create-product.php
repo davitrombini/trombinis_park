@@ -23,13 +23,13 @@
             <header class="form-header">
                 <h2>Cadastrar Brinquedo</h2>
             </header>
-            <form id="create-product" method="POST" enctype="multipart/form-data" action=".../controllers/adm/create-product.php">
+            <form id="create-product" method="POST" enctype="multipart/form-data" action="http://localhost/trombinis_park/controllers/adm/create-product.php">
                 <label for="product-title">Título:</label><br>
                 <input type="text" name="product-title" id="product-title" maxlength="255" required><br>
                 <label for="product-desc">Descrição:</label><br>
                 <textarea name="product-desc" id="product-desc" maxlength="255" cols="30" rows="5" style="resize: none;" required></textarea><br>
-                <label for="product-img">Imagem:</label><br>
-                <input type="file" name="product-img" id="product-img" required><br>
+                <label for="product_img">Imagem:</label><br>
+                <input type="file" name="product_img" id="product_img" required><br>
                 <div class="btn-create">
                     <input type="submit" value="Cadastrar">
                 </div>
@@ -45,7 +45,7 @@
         const data = {
             title: document.getElementById("product-title").value,
             desc: document.getElementById("product-desc").value,
-            img: document.getElementById("product-img").value,
+            img: document.getElementById("product_img").value,
         };
 
         fetch("http://localhost/trombinis_park/controllers/adm/create-product.php", {

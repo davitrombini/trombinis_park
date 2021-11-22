@@ -24,7 +24,7 @@
                 <h2>Editar Brinquedo</h2>
             </header>
             
-            <form id="edit-product-form" action="./controllers/adm/update-product.php">
+            <form id="edit-product-form" action="http://localhost/trombinis_park/controllers/adm/update-product.php" method="POST" enctype="multipart/form-data">
                 <label for="product-title">Título:</label><br>
                 <input type="text" name="product-title" id="product-title" maxlength="255" required><br>
 
@@ -32,8 +32,9 @@
                 <textarea name="product-desc" id="product-desc" cols="30" rows="5" maxlength="255" required></textarea><br>
 
                 <label for="product-img">Imagem:</label><br>
-                <input type="file" name="product-img" id="product-img" maxlength="255" required><br>
+                <input type="file" name="product_img" id="product-img"><br>
 
+                <input type="hidden" name="id" value="<?= $_GET["id"];?>">
                 <div class="buttons">
                     <input type="submit" value="Salvar">
                     <a href="../adm/brinquedos.php">Cancelar</a>
@@ -53,8 +54,10 @@
     .then(response => {
         document.getElementById("product-title").value = response.title;
         document.getElementById("product-desc").value = response.description;
-        document.getElementById("product-img").value = response.img;
+        //document.getElementById("product-img").value = response.img;
     })
+
+    
 
     
 </script>

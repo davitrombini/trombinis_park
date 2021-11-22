@@ -19,7 +19,20 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="brinquedos.php">Brinquedos</a></li>
             <li><a href="sobre.php">Sobre</a></li>
-            <li><a href="./src/pages/user/my-account.php">Minha Conta</a></li>            
+            <li><a href="./src/pages/user/my-account.php">Minha Conta</a></li> 
+           
+           
+            <?php 
+             if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+          }
+            if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] == "1") {
+                
+           ?>
+            <li><a href="./adm/">Painel Administrativo</a></li> 
+            <?php } ?>
+       
+              
         </ul>
         <div class="nav__icon">
             <span></span>

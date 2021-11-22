@@ -1,15 +1,26 @@
-<?php 
-    session_start();
+<?php
+session_start();
 
-    if (!isset($_SESSION["user_id"])){
-        header("Location: http://localhost/trombinis_park/src/pages/user/login.php");
-    }
+if (!isset($_SESSION["user_id"])) {
+    header("Location: http://localhost/trombinis_park/src/pages/user/login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <style>
+        .bt-site {
+            display: block;
+            position: fixed;
+            bottom: 40px;
+            right: 30px;
+            z-index: 30;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../../semantic/dist/semantic.min.css">
     <link rel="stylesheet" href="../../css/my-account.css">
@@ -17,7 +28,18 @@
     <script src="../../../semantic/dist/semantic.min.js"></script>
     <title>Minha Conta</title>
 </head>
+
 <body>
+    <div class="bt-site">
+        <div class="ui blue button">
+            <a href="http://localhost/trombinis_park/">
+                <i class="white home icon">
+                </i>
+                Voltar para o site
+            </a>
+
+        </div>
+    </div>
     <main class="container">
         <div class="header" id="div-name">
             <i class="massive user circle outline icon"></i>
@@ -26,14 +48,18 @@
             <div id="label-email" class="ui label element" style="font-size: 16px; font-weight: 600;"><i class="mail icon"></i></div>
             <div class="favorites element"><a href="../../../favoritos.php">Favoritos</a></div>
             <div class="config element" onclick="document.getElementById('id01').style.display = 'block';"><a>Informações da conta</a></div>
+
             <a href="../../../controllers/user/logout.php">
                 <button class="negative ui right labeled icon button">
                     <i class="arrow alternate circle right outline icon"></i>
                     Sair
                 </button>
             </a>
+
         </div>
     </main>
+
+
 
     <!--Modal Account Informations-->
     <div id="id01" class="w3-modal">
@@ -63,37 +89,39 @@
                 </form>
             </div>
         </div>
-    </div><!--Modal-->
+    </div>
+    <!--Modal-->
 </body>
 <script>
-    fetch(`http://localhost/trombinis_park/controllers/adm/find-user.php?id=${<?php $id = $_SESSION["user_id"]; echo "$id" ?>}`, {
-        method: "GET"
-    })
-    .then(response => response.json())
-    .then(response => {
-        const labelEmail = document.getElementById("label-email");
-        const userEmail = document.createElement("span");
-        userEmail.innerText = response.email;
-        labelEmail.appendChild(userEmail);
+    fetch(`http://localhost/trombinis_park/controllers/adm/find-user.php?id=${<?php $id = $_SESSION["user_id"];
+                                                                                echo "$id" ?>}`, {
+            method: "GET"
+        })
+        .then(response => response.json())
+        .then(response => {
+            const labelEmail = document.getElementById("label-email");
+            const userEmail = document.createElement("span");
+            userEmail.innerText = response.email;
+            labelEmail.appendChild(userEmail);
 
-        const divName = document.getElementById("div-name");
-        const userName = document.createElement("h1");
-        userName.style.color = "white";
-        userName.innerText = response.name;
-        divName.appendChild(userName);
+            const divName = document.getElementById("div-name");
+            const userName = document.createElement("h1");
+            userName.style.color = "white";
+            userName.innerText = response.name;
+            divName.appendChild(userName);
 
-        document.getElementById("user-name").value = response.name;
-        document.getElementById("user-email").value = response.email;
-    })
+            document.getElementById("user-name").value = response.name;
+            document.getElementById("user-email").value = response.email;
+        })
 
-    function edit(){
+    function edit() {
         document.getElementById("save-button").style.visibility = "visible";
         document.getElementById("user-name").disabled = false;
         document.getElementById("user-email").disabled = false;
         document.getElementById("user-password").disabled = false;
     }
 
-    function cancel(){
+    function cancel() {
         document.getElementById("id01").style.display = "none";
         document.getElementById("save-button").style.visibility = "hidden";
         document.getElementById("user-name").disabled = true;
@@ -101,7 +129,7 @@
         document.getElementById("user-password").disabled = true;
     }
 
-    document.getElementById("user-informations").addEventListener("submit", function (e){
+    document.getElementById("user-informations").addEventListener("submit", function(e) {
         e.preventDefault();
 
         document.getElementById("id01").style.display = "none";
@@ -111,19 +139,21 @@
         document.getElementById("user-password").disabled = true;
 
         const data = {
-            id: Number.parseInt(<?php $id = $_SESSION["user_id"]; echo "$id"; ?>),
+            id: Number.parseInt(<?php $id = $_SESSION["user_id"];
+                                echo "$id"; ?>),
             name: document.getElementById("user-name").value,
             email: document.getElementById("user-email").value,
             password: document.getElementById("user-password").value
         }
 
         fetch("http://localhost/trombinis_park/controllers/adm/update-user.php", {
-            method: "PATCH",
-            body: JSON.stringify(data)
-        })
-        .catch((error) => {
-            alert(`${error.message}`);
-        });
+                method: "PATCH",
+                body: JSON.stringify(data)
+            })
+            .catch((error) => {
+                alert(`${error.message}`);
+            });
     })
 </script>
+
 </html>

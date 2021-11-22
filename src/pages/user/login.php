@@ -34,6 +34,7 @@
         <div class="footer">
             <span>Esqueceu a senha? <a href="forget-password.php">Clique aqui</a></span>
             <span>Não tem uma conta? <a href="create-user.php">Cadastre-se aqui</a></span>
+            <span><a href="http://localhost/trombinis_park/">Voltar para o site</a></span>
         </div>
     </main>
 </body>

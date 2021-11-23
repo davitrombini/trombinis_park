@@ -29,7 +29,7 @@
      --><div class="element sobre">
             <h2>Sobre</h2>
             <p>A Trombini's Park é uma empresa que aluga brinquedos para festas infantis. <br>
-            <?= date("Y"). " - todos os direitos reservados.";?></p>
+            <?= date("Y"). " - © Todos os direitos reservados.";?></p>
         </div>
 
     </footer>

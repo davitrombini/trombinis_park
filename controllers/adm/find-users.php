@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    if ($_SESSION["user_id"] != 1){
+    if ($_SESSION["user_admin"] != 1){
         header("Location: http://localhost/trombinis_park/");
     }
 
